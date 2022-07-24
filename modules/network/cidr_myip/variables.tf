@@ -1,0 +1,1 @@
+variable "u_allowed_cidr_myip" {}
