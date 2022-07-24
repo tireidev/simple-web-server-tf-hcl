@@ -72,33 +72,6 @@ resource "aws_security_group_rule" "egress_allow_all" {
   security_group_id = "${aws_security_group.prj_dev_sg_web.id}"
 }
 
-# resource "aws_security_group" "prj_dev_sg_web" {
-#   name        = "prj_dev_sg_web"
-#   description = "security group for web server"
-#   vpc_id      = var.u_vpc_id
-
-#   ingress {
-#     description = ""
-#     from_port   = 22
-#     to_port     = 22
-#     protocol    = "tcp"
-#     cidr_blocks = [local.allowed-cidr-myip]
-#   }
-
-#   egress {
-#     from_port        = 0
-#     to_port          = 0
-#     protocol         = "-1"
-#     cidr_blocks      = ["0.0.0.0/0"]
-#     ipv6_cidr_blocks = ["::/0"]
-#   }
-
-#   tags = {
-#     env = "dev"
-#     Name = "allow_ssh"
-#   }
-# }
-
 output "sg_web_id" {
   value = "${aws_security_group.prj_dev_sg_web.id}"
 }

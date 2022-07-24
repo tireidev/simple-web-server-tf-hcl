@@ -31,16 +31,3 @@ resource "aws_subnet" "public_subnet" {
 output "public_subnet_id" {
   value = "${aws_subnet.public_subnet.id}"
 }
-
-# resource "aws_subnet" "private_subnet" {
-#   vpc_id = var.u_vpc_id
-#   cidr_block = var.u_private_subnet_ip
-
-#   tags = {
-#     Name = "private_subnet"
-#   }
-# }
-
-# output "private_subnet_id" {
-#   value = "${aws_subnet.private_subnet.id}"
-# }
